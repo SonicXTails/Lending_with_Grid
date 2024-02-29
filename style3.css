@@ -1,0 +1,457 @@
+@font-face {
+    font-family: "DM Sans";
+    font-display: swap;
+    src: url("Materials/DMSans-Regular.ttf") format("woff");
+  }
+
+@font-face {
+  font-family: "inter Bold";
+  font-display: swap;
+  src: url("Materials/Inter-Black.otf") format("woff");
+}
+
+@font-face {
+  font-family: "inter";
+  font-display: swap;
+  src: url("Materials/Inter-Regular.otf") format("woff");
+}
+
+@font-face {
+  font-family: "DM Sans Bold";
+  font-display: swap;
+  src: url("Materials/DMSans-Bold.ttf") format("woff");
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+body{
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 0;
+}
+/*-------------------------------------------------------------------------------*/
+  
+.header {
+  font-family: "DM Sans", serif;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.left-menu-name{
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.right-menu-ls{
+  display: flex;
+  align-items: baseline;
+  margin-right: 500px;
+  margin-top: 35px;
+}
+
+.name{
+  color: #000AFF;
+  display: flex;   
+  font-family: "DM Sans bold";
+  text-decoration: 0;
+  font-size: 180%;
+}
+
+.login{
+  color: #8A8A8A;
+  align-self: center;
+  display: flex;
+  margin-right: 20%;
+  font-size: large;
+  text-decoration: 0;
+  font-family: "DM Sans Bold";
+}
+
+.sign{
+  color: #000AFF;
+  display: flex;
+  font-size: large;
+  text-decoration: 0;
+  font-family: "DM Sans Bold";
+  align-self: center;
+}
+
+.man{
+  margin-left: 0%;
+  width: 620px;
+  height: 600px;
+  display: flex;
+}
+.man{
+  filter: grayscale(1); /* Черно-белый фильтр для изображения */
+  transition: 0.5s; /* Время изменения цвета изображения */
+}
+.man:hover {
+  filter: grayscale(0); /* Цветное изображение при наведении */
+}
+
+.main{
+  color: #000AFF;
+  display: flex;
+  margin-top: 100px;
+}
+
+.big-text {
+  font-family: "DM Sans Bold", serif;
+  color: black;
+  margin-top: 220px;
+  font-size: 350%;
+  margin-left: 200px;
+  display: flex;
+  max-width: 800px;
+  text-shadow: 1px 1px black;
+  margin-bottom: 0%;
+}
+
+.under-big-text{
+  font-family: "DM Sans", serif;
+  margin-left: 200px;
+  width: 700px;
+  height: 100px;
+  font-size: 150%;
+  display: flex;
+  color: rgb(139, 139, 139);
+  margin-bottom: 0%;
+}
+
+#find-line {
+  width: 980px;
+  height: 80px;
+  margin-left: 200px;
+  margin-bottom: 0%;
+  background: white;
+  display: flex;
+  box-shadow: inset 0px 5px 10px 0px;
+  border-radius: 20px;
+  border: 2px;
+  box-shadow: 0px 10px 20px 5px rgb(223, 223, 223);
+  transform: translateY(-5px);
+}
+
+.find-text-box{
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 0%;
+  width: 600px;
+  height: 32px;
+  display: flex;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #cccccc;
+  font-family: "DM Sans", serif;
+  font-size: large;
+}
+
+.find-text-box:focus {
+  outline:#8A8A8A;
+  border-color: #8A8A8A;
+}
+
+
+.Mireze{    
+  margin-top: 20px;
+  width: 100px;
+  height: 36.1px;
+  display: flex;
+  border: 1px solid #cccccc;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  font-family: "DM Sans", serif;
+  font-size: 17px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-align-last:center;
+}
+.Mireze:focus{
+  outline:#8A8A8A;
+}
+
+.glow-on-hover {
+    margin-top: 13px;
+    margin-left: 40px;
+    width: 190px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #000AFF;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-family: "DM Sans Bold";
+    font-size: large;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+.glow-on-hover:active {
+    color: black;
+}
+.glow-on-hover:active:after {
+    background: transparent;
+}
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #002bff;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.glow-on-hover:hover .man{
+  filter: grayscale(0); /* Цветное изображение при наведении */
+}
+/*--------------------------------Конец------------------------------------------*/
+.left-end{
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.name-end{
+  margin-left: 27px;
+  font-family: "inter Bold", serif;
+  font-size: 300%;
+  font-weight: bolder;
+  color:white;
+  display: flex;
+}
+
+.block-E{
+  margin-top: 30px;
+  margin-left: 10px;
+  font-family: "inter", serif;
+  font-size: 100%;
+  color:white;
+  font-weight: 0;
+  display: flex;
+}
+
+.images{
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 60px;
+}
+
+.end-credits{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.right-end{
+  display: flex;
+  height: 100px;
+  width: 2000px;
+  flex-direction: column;
+  margin-top: 135px;
+  margin-left: 150px;
+}
+
+.first-stroke{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.second-stroke{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  display: flex;
+  margin-left: 174px;
+  margin-top: 30px;
+}
+
+
+.third-stroke{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-right: 248px;
+}
+
+.g2024{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href1{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href2{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href3{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href4{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href5{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href6{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+.href7{
+  font-family: "inter";
+  font-size: 100%;
+  color:white;
+  text-decoration: 0;
+}
+
+
+
+
+
+
+
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.5fr 1.2fr; 
+  grid-auto-columns: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Lable Login_and_unsigned"
+    "Text_FindLine Photo"
+    "Links Content";
+}
+
+.Lable { 
+  grid-area: Lable;
+}
+.Login_and_unsigned { 
+  grid-area: Login_and_unsigned; 
+  margin-left: 505px;
+}
+.Photo { 
+  grid-area: Photo;
+}
+.Text_FindLine { grid-area: Text_FindLine; }
+.Links { 
+  grid-area: Links; 
+  display: flex;
+  background-color: #000AFF;
+}
+
+.Content {  
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  margin-top: 200px;
+  display: flex;
+  background-color: #000AFF;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    "Content1 Content2 Content3 Content4"
+    "Content1 Content2 Content3 Content4"
+    "Content1 Content2 Content3 Content4"
+    "Content1 Content2 Content3 Content4"
+    ". . . .";
+}
+
+.Linkses{
+  display: flex;
+  width: 1000px;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+.Content1 { 
+  margin-top: 60px;
+  grid-area: Content1; 
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Content2 { 
+  margin-top: 95px;
+  grid-area: Content2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Content3 {
+  margin-top: 60px; 
+  grid-area: Content3; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.Content4{ 
+  margin-bottom: 57px;
+  grid-area: Content4; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
